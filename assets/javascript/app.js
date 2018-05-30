@@ -3,7 +3,6 @@ $(document).ready(function () {
     var seconds = 15; //players will have 15 seconds to answer the question
     var correctTotal = 0; //the number of correct answers
     var incorrectTotal = 0; //the number of incorrect answers
-
     //Question, Answer, Image Object
     var triviaQuestions = [
         {
@@ -87,7 +86,7 @@ $(document).ready(function () {
         {
             question: "Which of the following is a Redskins color?",
             answerChoices: ["black", "yellow", "burgandy", "white"],
-            correctAnswer: "burgandy",
+            correctAnswer: "burgundy",
             image: "<img src = 'assets/images/question14.jpg' width='200px'>"
         },
         {
@@ -97,6 +96,7 @@ $(document).ready(function () {
             image: "<img src = 'assets/images/question15.jpg' width='200px'>"
         },]
 
+        //Does not work...
     function addQuestionToScreen() {
         $("#questionScreen").append(
             "<h4>" + triviaQuestions[questionNumber].question +
@@ -105,7 +105,7 @@ $(document).ready(function () {
             "</p><p class='choices'>" + triviaQuestions[questionNumber].answerChoices[2] +
             "</p><p class='choices'>" + triviaQuestions[questionNumber].answerChoices[3] + "</p>")
     }
-
+//Does not work...well hard to say if it does since question does not appear...
     function answerIsCorrect() {
         $("#questionScreen").html("<p>That's right, sports fan!</p>");
         correctTotal++;
@@ -114,7 +114,7 @@ $(document).ready(function () {
         setTimeout(nextQuestion, 3000);
         questionNumber++;
     }
-
+//Does not work...well hard to say if it does since question does not appear...
     function answerIsWrong() {
         $("#questionScreen").html("<p>That's not quite right!</p>");
         incorrectTotal++;
@@ -123,7 +123,7 @@ $(document).ready(function () {
         setTimeout(nextQuestion, 3000);
         questionNumber++;
     }
-
+//Works pretty well...
     function noAnswerTimeUp() {
         if (seconds === 0) {
             $("#questionScreen").html("<p>Time's Up!</p>");
@@ -134,7 +134,7 @@ $(document).ready(function () {
             questionNumber++;
         }
     }
-
+//Does not work
     function showResults() {
         if (correctTotal === triviaQuestions.length) {
             var message = "Perfect Score! You are a true Skins fan!";
@@ -150,7 +150,7 @@ $(document).ready(function () {
         gameReset();
         $("#start").click(nextQuestion);
     }
-
+//does not work
     function timer() {
         clock = setInterval(countDown, 1000);
         function countDown() {
@@ -163,7 +163,7 @@ $(document).ready(function () {
             $("#timer").html(seconds);
         }
     }
-
+//kind of works
     function nextQuestion(){
         if (questionNumber < triviaQuestions.length){
             seconds = 15; 
