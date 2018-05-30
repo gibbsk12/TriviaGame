@@ -24,3 +24,10 @@ body{
 #timer{
     color: #fdc22e;
 }
+
+.tinyFooter{
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px black;
+}
