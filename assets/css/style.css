@@ -3,12 +3,24 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #headerPic{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
-
+.choices{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1%;
+}
+.choices:hover{
+    background-color: #fdc22e;
+}
+#timer{
+    color: #fdc22e;
+}
