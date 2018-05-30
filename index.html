@@ -6,12 +6,13 @@
         crossorigin="anonymous">
     <!-- Link Personal CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Link Personal JavaScript -->
-    <script src="./assets/javascript/app.js"></script>
     <!-- Link jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    
+    <!-- Link Personal JavaScript -->
+    <script src="./assets/javascript/app.js"></script>
+
+
 </head>
 
 <body>
@@ -19,24 +20,8 @@
         <img src="./assets/images/redskinsheader.jpg" class="img-fluid" id="headerPic">
     </header>
     <div class="container">
-        <div class="rows text-center">
-                <!-- Start Button When Page Loads -->
-                <button class="btn btn-warning" id="startButton">Start The Game!</button>
-                <!-- Question Page -->
-                <div id="timeDiv"> </div>
-                <div id="questionDiv"></div>
-                <div id="answerDiv"></div>
-                <!-- Answer Page to Question -->
-                <div id="message"></div>
-                <div id="imageDiv"></div>
-                <div id="correctAnswer"></div>
-                <div id="questionImage"></div>
-                <!-- Final Answer -->
-                <div id="numberCorrect"></div>
-                <div id="numberIncorrect"></div>
-                <div id="numberUnanswered"></div>
-                <div id="startOverButton"></div>
-            </div>
+        <div class="jumbotron text-center" id="questionScreen">
+            <h1 id="start">Start!</h1>
         </div>
     </div>
 
