@@ -157,7 +157,7 @@ $(document).ready(function () {
 			var endMessage = "Nice job!";
 		}
 		else {
-			var endMessage = "Are you're not a Cowboys fan?";
+			var endMessage = "Are you sure you're not a Cowboys fan?";
 		}
 		$("#questionScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" +
 			correctTotal + "</strong> right.</p>" +
