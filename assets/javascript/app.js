@@ -68,7 +68,7 @@ $(document).ready(function () {
 		{
 			question: "What is the name of the Redskins Fight Song?",
 			answerChoices: ["You Like That?", "Battle of the Braves!", "Honky Tonk Hogs", "Hail to the Redskins!"],
-			correctAnswer: "Hail to the Redskins",
+			correctAnswer: "Hail to the Redskins!",
 			image: "<img src = 'assets/images/question11.jpg' width='200px'>"
 		},
 		{
@@ -85,7 +85,7 @@ $(document).ready(function () {
 		},
 		{
 			question: "Which of the following is a Redskins color?",
-			answerChoices: ["black", "yellow", "burgandy", "white"],
+			answerChoices: ["black", "yellow", "burgundy", "white"],
 			correctAnswer: "burgundy",
 			image: "<img src = 'assets/images/question14.jpg' width='200px'>"
 		},
@@ -208,9 +208,9 @@ $(document).ready(function () {
 	$("#start").click(nextQuestion); //starts the game
 
 	// this does NOT work
-	$("#questionScreen").on("click", ".answerChoices", (function () {
+	$("#questionScreen").on("click", ".choices", (function () {
 		var userGuess = $(this).text();
-		if (userGuess === questions[questionNumber].correctAnswer) {
+		if (userGuess === triviaQuestions[questionNumber].correctAnswer) {
 			clearInterval(clock);
 			playerGetsItRight();
 		}
