@@ -1,7 +1,7 @@
 # TriviaGame
 This is the fifth assignment for the University of Richmond Coding Bootcamp.
 
-In this assignment, we were to create a trivia game using jQuery.
+In this assignment, we had to create a Trivia game using JavaScript for the lgoic and jQuery to manipulate the HTML.
 
 ## Getting Started
 **Washington Redskins Trivia Game**
