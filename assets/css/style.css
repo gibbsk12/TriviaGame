@@ -31,3 +31,11 @@ body{
     text-align: center;
     text-shadow: 2px 2px black;
 }
+
+.progress {
+    background-color: lightgray;
+    height: 2rem;
+}
+.progress-bar {
+    background-color:#580d0f;
+}
