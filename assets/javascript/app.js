@@ -109,7 +109,7 @@ $(document).ready(function () {
 			correctAnswer +
 			"</span>.</p>" +
 			triviaQuestions[questionNumber].image);
-		setTimeout(nextQuestion, 4000);
+		setTimeout(nextQuestion, 2000);
 		questionNumber++;
 	}
 	// This function is called when the answer is incorrect.
@@ -121,7 +121,7 @@ $(document).ready(function () {
 			correctAnswer +
 			"</span>.</p>" +
 			triviaQuestions[questionNumber].image);
-		setTimeout(nextQuestion, 4000);
+		setTimeout(nextQuestion, 2000);
 		questionNumber++;
 	}
 	// This function is called when time is up.
