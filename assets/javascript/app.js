@@ -100,6 +100,7 @@ $(document).ready(function () {
 		var progressBarVisible = Math.floor((questionNumber / 15) * 100);
 		$('.progress-bar').css("width", progressBarVisible + '%');
 	}
+
 	// This function is called when the answer is correct. 
 	function playerGetsItRight() {
 		$("#questionScreen").html("<p>You got it!</p>");
@@ -162,6 +163,7 @@ $(document).ready(function () {
 		function countDown() {
 			if (time < 1) {
 				clearInterval(clock);
+				whistlePlays ();
 				playerRunsOutOfTime();
 			}
 			if (time > 0) {
@@ -197,16 +199,32 @@ $(document).ready(function () {
 		timer();
 		playerRunsOutOfTime();
 	}
+
+	// Theoretically plays sounds 
+	var playWin = document.getElementById("whistleSound");
+	function whistlePlays (){
+		playWin.play();
+	}
+	var playLose = document.getElementById("crowdSound");
+	function crowdPlays (){
+		playLose.play();
+	}
+
+
+
+
 	//Checks to see if answer was correct or incorrect
 	$("#start").click(nextQuestion); 
 	$("#questionScreen").on("click", ".choices", (function () {
 		var userGuess = $(this).text();
 		if (userGuess === triviaQuestions[questionNumber].correctAnswer) {
 			clearInterval(clock);
+			crowdPlays ();
 			playerGetsItRight();
 		}
 		else {
 			clearInterval(clock);
+			whistlePlays (); 
 			playerGetsItWrong();
 		}
 	}));
